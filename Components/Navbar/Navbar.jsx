@@ -56,8 +56,7 @@ const Navbar = () => {
           >
             <g
               transform="translate(0.000000,297.000000) scale(0.100000,-0.100000)"
-              fill="var(--color)"
-              stroke="none"
+              className={style.svg}
             >
               <path
                 d="M1743 2698 c-622 -781 -678 -848 -712 -849 -14 0 -35 -4 -46 -9 -18

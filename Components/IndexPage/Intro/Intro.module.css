@@ -21,6 +21,10 @@
   margin-left: 10%;
   border: 1.5px solid var(--slateblue);
   overflow: hidden;
+  transition: all 0.4s ease-in;
+}
+.intro:hover {
+  border: 1.5px solid var(--pink);
 }
 
 .wish {
@@ -112,7 +116,7 @@
   margin: 0;
   color: var(--color);
   font-weight: 500;
-  background: rgb(94, 79, 189);
+  background: var(--pink);
   padding: 20px;
   z-index: 10;
   transition: all 0.4s ease-in-out;

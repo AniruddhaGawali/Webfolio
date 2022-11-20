@@ -18,6 +18,9 @@ const Intro = () => {
           }}
           whileInView={{ x: 0 }}
           transition={{ delay: 0.15, type: "spring" }}
+          onHoverStart={() => setIntroDesc(false)}
+          onHoverEnd={() => setIntroDesc(true)}
+          œ
         >
           <div className={style.wish}>
             <span>Hello</span>

@@ -14,6 +14,18 @@
   z-index: 1000;
 }
 
+.svg {
+  fill: var(--color);
+  stroke: var(--color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.svg:hover {
+  fill: var(--pink);
+  stroke: var(--pink);
+}
+
 .isDesktop {
   display: none;
 }
@@ -52,9 +64,19 @@
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.navmenu_link li a:hover,
+
+.navmenu_link li {
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.navmenu_link li:hover {
+  background: var(--slateblue);
+}
+
 .navsocial li a:hover {
-  color: var(--slateblue);
+  color: var(--pink);
   text-decoration: underline;
 }
 
