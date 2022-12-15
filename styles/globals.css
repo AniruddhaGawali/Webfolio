@@ -15,7 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--backgroundcolor);
   transition: all 0.3s ease;
-  overflow: hidden;
+  overflow: auto;
 }
 
 a {
@@ -43,4 +43,25 @@ a {
     --backgroundcolor: #181a1b;
     --color: #fff;
   }
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 300px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(4px);
+}
+
+.swiper-slide-active {
+  filter: blur(0);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }

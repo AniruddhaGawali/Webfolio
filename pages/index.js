@@ -13,22 +13,22 @@ import { MdOutlineTimeline } from "react-icons/md";
 export default function Home(props) {
   const sideNav = [
     {
-      title: "intro",
-      tag: "#",
+      title: "Intro",
+      tag: "#intro",
       icon: <AiOutlineInfoCircle />,
     },
     {
-      title: "projects",
+      title: "Projects",
       tag: "#",
       icon: <SiNounproject />,
     },
     {
-      title: "skill",
+      title: "Skills",
       tag: "#",
       icon: <AiOutlineBulb />,
     },
     {
-      title: "timeline",
+      title: "Timeline",
       tag: "#",
       icon: <MdOutlineTimeline />,
     },
