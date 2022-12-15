@@ -33,7 +33,7 @@
   margin: 0px 20px;
   margin-top: -2rem;
   color: var(--pink);
-  transform: translateY(-20px);
+  transform: translateY(-30px);
 }
 
 .wish span {
@@ -80,29 +80,6 @@
   z-index: 20;
 }
 
-@media screen and (max-width: 768px) {
-  .intro {
-    padding: 0 5%;
-  }
-  .wish {
-    font-size: 1.5rem;
-    transform: translateY(-33px);
-  }
-  .wish span {
-    font-size: 2.5rem;
-  }
-  .intro h3 {
-    font-size: 1.5rem;
-  }
-  .name,
-  .surname {
-    font-size: 5rem;
-  }
-  .surname {
-    margin-top: -2.3rem;
-  }
-}
-
 .introdesc {
   top: 0%;
   left: 0%;
@@ -128,27 +105,58 @@
   line-height: 1.5;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
+  .intro {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .intro {
     padding: 0 5%;
   }
   .wish {
-    font-size: 1.2rem;
-    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transform: translateY(-33px);
+  }
+  .wish span {
+    font-size: 2.5rem;
+  }
+  .intro h3 {
+    font-size: 1.5rem;
+  }
+  .name,
+  .surname {
+    font-size: 5rem;
+  }
+  .surname {
+    margin-top: -2.3rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  .intro {
+    width: 80%;
+    height: 70%;
+  }
+  .name,
+  .surname {
+    font-size: 3rem;
+  }
+  .surname {
+    margin-top: -1.5rem;
+  }
+  .intro h3 {
+    font-size: 1.3rem;
+    margin: -10px 0 0 0px;
   }
   .wish span {
     font-size: 2rem;
   }
-  .intro h3 {
-    font-size: 1.2rem;
-    margin: -15px 0px;
+  .wish {
+    margin: 0 10px;
   }
-  .name,
-  .surname {
-    font-size: 3.5rem;
-  }
-  .surname {
-    margin-top: -1.5rem;
+  .introdesc {
+    font-size: 1rem;
   }
 }
 
