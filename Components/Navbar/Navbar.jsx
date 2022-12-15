@@ -194,12 +194,20 @@ c-7 -15 -14 -21 -16 -15 -5 16 5 41 17 41 7 0 6 -10 -1 -26z m-1898 -27 c0 -2
         <div className={`${style.navsocial}  ${style.isMobile}`}>
           <ul>
             <li title="GitHub">
-              <a href="https://github.com/AniruddhaGawali" target="_blank">
+              <a
+                href="https://github.com/AniruddhaGawali"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaGithub size="1.5rem" />
               </a>
             </li>
             <li title="Twitter">
-              <a href="https://twitter.com/AniruddhaAKG" target="_blank">
+              <a
+                href="https://twitter.com/AniruddhaAKG"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsTwitter size="1.5rem" />
               </a>
             </li>
@@ -207,6 +215,7 @@ c-7 -15 -14 -21 -16 -15 -5 16 5 41 17 41 7 0 6 -10 -1 -26z m-1898 -27 c0 -2
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/aniruddha-gawali-617804230/"
+                rel="noreferrer"
               >
                 <FaLinkedin size="1.5rem" />
               </a>

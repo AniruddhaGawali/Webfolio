@@ -1,8 +1,43 @@
 import Head from "next/head";
-import Intro from "../Components/IndexPage/Intro/Intro";
+import { useEffect } from "react";
+import IndexPage from "../Components/IndexPage";
+
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+// Importing icons
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { SiNounproject } from "react-icons/si";
+import { AiOutlineBulb } from "react-icons/ai";
+import { MdOutlineTimeline } from "react-icons/md";
+
+export default function Home(props) {
+  const sideNav = [
+    {
+      title: "intro",
+      tag: "#",
+      icon: <AiOutlineInfoCircle />,
+    },
+    {
+      title: "projects",
+      tag: "#",
+      icon: <SiNounproject />,
+    },
+    {
+      title: "skill",
+      tag: "#",
+      icon: <AiOutlineBulb />,
+    },
+    {
+      title: "timeline",
+      tag: "#",
+      icon: <MdOutlineTimeline />,
+    },
+  ];
+
+  useEffect(() => {
+    props.setSideNavData(sideNav);
+  }, []);
+
   return (
     <>
       <Head>
@@ -11,7 +46,7 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main className={styles.main}>
-        <Intro />
+        <IndexPage />
       </main>
     </>
   );

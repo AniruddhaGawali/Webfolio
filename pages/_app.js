@@ -1,11 +1,16 @@
 import "../styles/globals.css";
 import Navbar from "../Components/Navbar/Navbar";
+import SideNav from "../Components/SideNav";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps, router }) {
+  const [sideNavData, setSideNavData] = useState(null);
+
   return (
     <>
       <Navbar />
+      <SideNav navData={sideNavData} />
       <br />
       <br />
       <br />
@@ -18,7 +23,7 @@ function MyApp({ Component, pageProps, router }) {
           exit={{ backgroundColor: "black" }}
           transition={{ type: "spring", bounce: ".1", delay: 0.5 }}
         >
-          <Component {...pageProps} />
+          <Component {...pageProps} setSideNavData={setSideNavData} />
         </motion.div>
       </AnimatePresence>
     </>
