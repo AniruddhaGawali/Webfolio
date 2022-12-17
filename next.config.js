@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
 
-module.exports = nextConfig
+module.exports = {
+  env: {
+    MONGODB_URI: process.env.MONGODB_URI,
+  },
+};
+
+module.exports = nextConfig;

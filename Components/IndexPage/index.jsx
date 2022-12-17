@@ -2,7 +2,7 @@ import React from "react";
 import Intro from "./Intro/Intro";
 import Projects from "./Projects";
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
     <>
       <Intro />
@@ -16,7 +16,7 @@ const IndexPage = () => {
       <br />
       <br />
       <br />
-      <Projects />
+      <Projects projectsData={props.projectsData} />
       <br />
       <br />
       <br />

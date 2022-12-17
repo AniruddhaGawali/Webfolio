@@ -1,14 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 
-export default function App() {
+import style from "./style.module.css";
+
+// import icons
+import { GrProjects } from "react-icons/gr";
+
+export default function Projects(props) {
   return (
     <>
+      {/* {setProjectFlip(ProjectFlipTemp)} */}
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -26,34 +31,41 @@ export default function App() {
         loop={true}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
+        {props.projectsData.map((project, key) => {
+          return (
+            <SwiperSlide key={key}>
+              <div className={`${style.thecard} thecard`}>
+                <div className={style.thefront}>
+                  <div className={style.projectCardIcon}>
+                    <GrProjects />
+
+                    <h5>{project.title}</h5>
+                  </div>
+                </div>
+
+                <div className={style.theback}>{project.desc}</div>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
+
+      {/* <div className={style.thefront}>
+        <h1>Front of Card</h1>
+        <p>
+          This is the front of the card. It contains important information.
+          Please see overleaf for more details.
+        </p>
+      </div>
+
+      <div className={style.theback}>
+        <h1>Back of Card</h1>
+        <p>
+          Your use of this site is subject to the terms and conditions governing
+          this and all transactions.
+        </p>
+        <button>Submit</button>
+      </div> */}
     </>
   );
 }
