@@ -72,7 +72,7 @@
   transition: all 0.3s ease;
 }
 .navmenu_link li:hover {
-  background: var(--slateblue);
+  background: rgba(var(--slateblue_rgb), 0.2);
 }
 
 .navsocial li a:hover {
