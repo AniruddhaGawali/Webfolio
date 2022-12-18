@@ -65,12 +65,8 @@ export default function Projects(props) {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={
-          width > 1253 ? 4 : width > 1040 ? 3 : width > 660 ? 2 : 1
-        }
-        spaceBetween={
-          width > 1253 ? 30 : width > 1040 ? 30 : width > 660 ? 30 : 20
-        }
+        slidesPerView={4}
+        spaceBetween={30}
         // Responsive breakpoints
         breakpoints={{
           // when window width is >= 320px
