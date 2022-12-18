@@ -5,7 +5,6 @@ import IndexPage from "../Components/IndexPage";
 import styles from "../styles/Home.module.css";
 
 // Importing custom hooks
-import useWindowDimensions from "../hooks/useWindowDimensions";
 
 // Importing icons
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -14,7 +13,6 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { MdOutlineTimeline } from "react-icons/md";
 
 export default function Home(props) {
-  const { width } = useWindowDimensions();
   const sideNav = [
     {
       title: "Intro",
@@ -52,7 +50,7 @@ export default function Home(props) {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main class Name={styles.main}>
-        <IndexPage projectsData={projectsData} width={width} />
+        <IndexPage projectsData={projectsData} />
       </main>
     </>
   );
