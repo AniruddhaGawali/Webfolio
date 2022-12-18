@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./Intro/Intro";
-// import Projects from "./Projects";
+import Projects from "./Projects";
 
 const IndexPage = (props) => {
   return (
@@ -16,7 +16,7 @@ const IndexPage = (props) => {
       <br />
       <br />
       <br />
-      {/* <Projects projectsData={props.projectsData} width={props.width} /> */}
+      <Projectsx projectsData={props.projectsData} width={props.width} />
       <br />
       <br />
       <br />

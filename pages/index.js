@@ -36,7 +36,7 @@ export default function Home(props) {
     },
   ];
 
-  // const [projectsData, setProjectsData] = useState(props.projectsData.data);
+  const [projectsData, setProjectsData] = useState(props.projectsData.data);
 
   useEffect(() => {
     props.setSideNavData(sideNav);
@@ -50,8 +50,8 @@ export default function Home(props) {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main class Name={styles.main}>
-        {/* <IndexPage projectsData={projectsData} /> */}
-        <IndexPage />
+        <IndexPage projectsData={projectsData} />
+        {/* <IndexPage /> */}
       </main>
     </>
   );
