@@ -7,7 +7,7 @@ import { EffectCoverflow } from "swiper";
 
 import style from "./style.module.css";
 
-import useWindowDimensions from "../../../Hooks/useWindowDimensions";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 // import icons
 import { IoLogoPython, IoLogoChrome } from "react-icons/io";
