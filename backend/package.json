@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "Aniruddha Gawali Webfolio backend",
   "main": "index.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "devStart": "nodemon index.js"
   },
   "author": "Aniruddha Gawali",
   "license": "ISC",
