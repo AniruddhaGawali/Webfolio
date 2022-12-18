@@ -57,10 +57,10 @@ export default function Home(props) {
   );
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch("http://localhost:8080/api/projects");
-//   const projectsData = await res.json();
-//   return {
-//     props: { projectsData }, // will be passed to the page component as props
-//   };
-// }
+export async function getStaticProps() {
+  const res = await fetch("https://webfolio-backend.vercel.app/api/projects");
+  const projectsData = await res.json();
+  return {
+    props: { projectsData }, // will be passed to the page component as props
+  };
+}
