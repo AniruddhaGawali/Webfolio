@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow } from "swiper";
 
 import style from "./style.module.css";
 
@@ -27,7 +27,7 @@ export default function Projects(props) {
   const addLink = (type, link) => {
     if (type === "web" || type === "react") {
       return (
-        <a href={link} className={style.link} target="_blank">
+        <a href={link} className={style.link} target="_blank" rel="noreferrer">
           <HiOutlineLink />
         </a>
       );
@@ -38,12 +38,33 @@ export default function Projects(props) {
 
   return (
     <>
-      {/* {setProjectFlip(ProjectFlipTemp)} */}
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={4}
+        spaceBetween={10}
+        // Responsive breakpoints
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 600px
+          660: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1040: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1253: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -51,9 +72,10 @@ export default function Projects(props) {
           modifier: 1,
           slideShadows: true,
         }}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow]}
         loop={true}
         className="mySwiper"
+        id="projects"
       >
         {props.projectsData.map((project, key) => {
           return (
@@ -76,6 +98,7 @@ export default function Projects(props) {
                       href={project.github}
                       className={style.link}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <FaGithub />
                     </a>
