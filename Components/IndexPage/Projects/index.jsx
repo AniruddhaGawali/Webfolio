@@ -7,6 +7,8 @@ import { EffectCoverflow } from "swiper";
 
 import style from "./style.module.css";
 
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
+
 // import icons
 import { IoLogoPython, IoLogoChrome } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
@@ -35,7 +37,7 @@ import { HiOutlineLink } from "react-icons/hi";
 // }}
 
 export default function Projects(props) {
-  const width = props.width;
+  const { width } = useWindowDimensions();
   const getIcon = (type) => {
     if (type === "python") {
       return <IoLogoPython />;
@@ -65,29 +67,14 @@ export default function Projects(props) {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={4}
-        spaceBetween={30}
+        slidesPerView={
+          width > 1253 ? 4 : width > 1040 ? 3 : width > 660 ? 2 : 1
+        }
+        spaceBetween={
+          width > 1253 ? 30 : width > 1040 ? 30 : width > 660 ? 30 : 20
+        }
         // Responsive breakpoints
-        breakpoints={{
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          // when window width is >= 600px
-          660: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1040: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1253: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        }}
+
         coverflowEffect={{
           rotate: 0,
           stretch: 0,

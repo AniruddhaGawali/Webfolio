@@ -36,7 +36,7 @@ export default function Home(props) {
     },
   ];
 
-  // const [projectsData, setProjectsData] = useState(props.projectsData.data);
+  const [projectsData, setProjectsData] = useState(props.projectsData.data);
 
   useEffect(() => {
     props.setSideNavData(sideNav);
@@ -50,17 +50,17 @@ export default function Home(props) {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main class Name={styles.main}>
-        {/* <IndexPage projectsData={projectsData} /> */}
-        <IndexPage />
+        <IndexPage projectsData={projectsData} />
+        {/* <IndexPage /> */}
       </main>
     </>
   );
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch("http://localhost:8080/api/projects");
-//   const projectsData = await res.json();
-//   return {
-//     props: { projectsData }, // will be passed to the page component as props
-//   };
-// }
+export async function getStaticProps() {
+  const res = await fetch("https://webfolio-backend.vercel.app/api/projects");
+  const projectsData = await res.json();
+  return {
+    props: { projectsData }, // will be passed to the page component as props
+  };
+}
