@@ -16,7 +16,7 @@ const IndexPage = (props) => {
       <br />
       <br />
       <br />
-      <Projects projectsData={props.projectsData} />
+      <Projects projectsData={props.projectsData} width={props.width} />
       <br />
       <br />
       <br />
