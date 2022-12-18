@@ -10,7 +10,7 @@ const Intro = () => {
 
   return (
     <>
-      <div className={style.wrapper}>
+      <div className={style.wrapper} id="intro">
         <motion.div
           className={style.intro}
           initial={{

@@ -4,6 +4,11 @@ import SideNav from "../Components/SideNav";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
+import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
 function MyApp({ Component, pageProps, router }) {
   const [sideNavData, setSideNavData] = useState(null);
 

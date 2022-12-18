@@ -28,8 +28,12 @@ const SideNav = (props) => {
           >
             {props.navData.map((item, index) => {
               return (
-                <div className={style.sideNav__item} key={index}>
-                  <a href="#" className={style.sideNavIcon}>
+                <div
+                  className={style.sideNav__item}
+                  key={index}
+                  title={item.title}
+                >
+                  <a href={item.tag} className={style.sideNavIcon}>
                     {item.icon}
                   </a>
                 </div>
