@@ -19,7 +19,7 @@ export default function Home(props) {
     },
     {
       title: "Projects",
-      tag: "#",
+      tag: "#projects",
       icon: <SiNounproject />,
     },
     {
@@ -55,7 +55,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/projects");
+  const res = await fetch("http://localhost:8080/api/projects");
   const projectsData = await res.json();
   return {
     props: { projectsData }, // will be passed to the page component as props
