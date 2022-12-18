@@ -6,7 +6,6 @@ const projects = require("./api/projects");
 
 app.get("/", (req, res) => {
   res.send("Working");
-
 });
 
 app.use("/api/projects", projects);

@@ -5,8 +5,7 @@ const port = 8080;
 const projects = require("./api/projects");
 
 app.get("/", (req, res) => {
-  res.send("Working");
-
+  res.send("Hello World!");
 });
 
 app.use("/api/projects", projects);
