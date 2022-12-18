@@ -6,7 +6,7 @@
   --pink: #fb2576;
   --pink_rgb: 251, 37, 118;
   --purple: #150050;
-  --slateblue: rgb(94, 79, 189);
+  --slateblue: #5e4fbd;
   --slateblue_rgb: 94, 79, 189;
 }
 
@@ -56,6 +56,9 @@ a {
 .swiper-slide {
   width: 300px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-slide-active:hover > .thecard {
