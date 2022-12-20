@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
 import { EffectCoverflow } from "swiper";
+import { Navigation } from "swiper";
 
 import style from "./style.module.css";
 
@@ -14,27 +15,6 @@ import { IoLogoPython, IoLogoChrome } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineLink } from "react-icons/hi";
-
-// breakpoints={{
-//   // when window width is >= 320px
-//   320: {
-//     slidesPerView: 1,
-//     spaceBetween: 20,
-//   },
-//   // when window width is >= 600px
-//   660: {
-//     slidesPerView: 2,
-//     spaceBetween: 30,
-//   },
-//   1040: {
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//   },
-//   1253: {
-//     slidesPerView: 4,
-//     spaceBetween: 30,
-//   },
-// }}
 
 export default function Projects(props) {
   const { width } = useWindowDimensions();
@@ -82,7 +62,8 @@ export default function Projects(props) {
           modifier: 1,
           slideShadows: true,
         }}
-        modules={[EffectCoverflow]}
+        navigation={width < 660 ? true : false}
+        modules={[EffectCoverflow, Navigation]}
         loop={true}
         className="mySwiper"
         id="projects"

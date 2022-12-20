@@ -18,6 +18,8 @@ body {
   background-color: var(--backgroundcolor);
   transition: all 0.3s ease;
   overflow: auto;
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
 }
 
 a {
@@ -68,4 +70,15 @@ a {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color) !important;
+}
+
+@media screen and (max-width: 690px) {
+  .swiper-slide {
+    padding: 0 20px;
+  }
 }

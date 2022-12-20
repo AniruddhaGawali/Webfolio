@@ -8,6 +8,7 @@ import "swiper/css/bundle";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function MyApp({ Component, pageProps, router }) {
   const [sideNavData, setSideNavData] = useState(null);
