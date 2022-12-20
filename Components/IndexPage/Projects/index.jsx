@@ -14,7 +14,9 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { IoLogoPython, IoLogoChrome } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+
 import { HiOutlineLink, HiFastForward } from "react-icons/hi";
+
 
 export default function Projects(props) {
   const { width } = useWindowDimensions();
