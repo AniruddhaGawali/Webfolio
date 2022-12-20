@@ -59,6 +59,14 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FB2576", endColorstr="#5E4FBD", GradientType=1 );
 }
 
+.nextPage {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2.5rem;
+}
+
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
 .theback {
   position: absolute;
@@ -104,4 +112,22 @@
   text-align: center;
   color: var(--backgroundcolor);
   cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 690px) {
+  .nextPage {
+    display: flex;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
 }

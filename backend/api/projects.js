@@ -2,12 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 const { MongoClient } = require("mongodb");
+const { MONGODB_URI } = require("../config");
 
 router.get("/", async (req, res) => {
-  const uri =
-    "mongodb+srv://aniruddhagawali:7fBW5clCtDg4IlNA@cluster0.opnu03h.mongodb.net/?retryWrites=true&w=majority";
-
-  const client = new MongoClient(uri);
+  const client = new MongoClient(MONGODB_URI);
 
   try {
     client.connect();

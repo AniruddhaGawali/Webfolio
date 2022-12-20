@@ -14,7 +14,9 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { IoLogoPython, IoLogoChrome } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { HiOutlineLink } from "react-icons/hi";
+
+import { HiOutlineLink, HiFastForward } from "react-icons/hi";
+
 
 export default function Projects(props) {
   const { width } = useWindowDimensions();
@@ -42,7 +44,9 @@ export default function Projects(props) {
 
   return (
     <>
-      {console.log(width)}
+      <div className={style.title}>
+        <h2 id="projects">Projects</h2>
+      </div>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -66,7 +70,6 @@ export default function Projects(props) {
         modules={[EffectCoverflow, Navigation]}
         loop={true}
         className="mySwiper"
-        id="projects"
       >
         {props.projectsData.map((project, key) => {
           return (
@@ -78,6 +81,7 @@ export default function Projects(props) {
 
                     <h5>{project.title}</h5>
                   </div>
+                  <HiFastForward className={style.nextPage} />
                 </div>
 
                 <div className={style.theback}>
