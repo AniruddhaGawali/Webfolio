@@ -42,6 +42,9 @@ export default function Projects(props) {
 
   return (
     <>
+      <div className={style.title}>
+        <h2 id="projects">Projects</h2>
+      </div>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -65,7 +68,6 @@ export default function Projects(props) {
         modules={[EffectCoverflow, Navigation]}
         loop={true}
         className="mySwiper"
-        id="projects"
       >
         {props.projectsData.map((project, key) => {
           return (

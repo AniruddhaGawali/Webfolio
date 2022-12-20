@@ -114,8 +114,20 @@
   cursor: pointer;
 }
 
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 80px;
+}
+
 @media screen and (max-width: 690px) {
   .nextPage {
     display: flex;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
 }
