@@ -64,3 +64,5 @@ export async function getStaticProps() {
     props: { projectsData }, // will be passed to the page component as props
   };
 }
+
+// Not Working
