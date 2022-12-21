@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.send("Working");
 });
 
-app.use("/api/intro", intro);
 app.use("/api/projects", projects);
+app.use("/api/intro", intro);
 
 app.listen(port);
