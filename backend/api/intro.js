@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { MONGODB_URI } = require("../config");
 
 const { MongoClient } = require("mongodb");
+const { MONGODB_URI } = require("../config");
 
 router.get("/", async (req, res) => {
   const client = new MongoClient(MONGODB_URI);
