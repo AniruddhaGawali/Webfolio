@@ -3,13 +3,18 @@ import style from "./Intro.module.css";
 import { motion } from "framer-motion";
 import { MdCancel } from "react-icons/md";
 
-const Intro = () => {
-  const [introDesc, setIntroDesc] = React.useState(true);
+import { BsTwitter } from "react-icons/bs";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const Intro = (props) => {
+  const [introDesc, setIntroDesc] = React.useState(false);
 
   useEffect(() => {}, []);
 
   return (
     <>
+      {console.log(props.introData)}
+
       <div className={style.wrapper} id="intro">
         <motion.div
           className={style.intro}
@@ -42,12 +47,36 @@ const Intro = () => {
               transform: introDesc ? "translateY(100%)" : "translateY(0%)",
             }}
           >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              magni pariatur eveniet harum ut, architecto voluptate, provident
-              officiis quaerat magnam voluptas, cum saepe enim ab accusantium
-              dolorum ratione? Deleniti, quaerat?
-            </p>
+            <p>{props.introData.intro}</p>
+            <ul>
+              <li title="GitHub">
+                <a
+                  href="https://github.com/AniruddhaGawali"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              </li>
+              <li title="Twitter">
+                <a
+                  href="https://twitter.com/AniruddhaAKG"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsTwitter />
+                </a>
+              </li>
+              <li title="LinkedIn">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/aniruddha-gawali-617804230/"
+                  rel="noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
+              </li>
+            </ul>
           </motion.div>
         </motion.div>
       </div>
