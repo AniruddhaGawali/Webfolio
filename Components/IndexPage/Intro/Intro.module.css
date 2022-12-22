@@ -85,6 +85,7 @@
   left: 0%;
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -103,6 +104,24 @@
   margin: 0;
   padding: 0;
   line-height: 1.5;
+}
+
+.introdesc ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 2rem;
+}
+.introdesc ul li a {
+  font-size: 2rem !important;
+  margin: 0 10px;
+}
+.introdesc ul li :hover {
+  color: whitesmoke;
 }
 
 @media screen and (max-width: 1000px) {

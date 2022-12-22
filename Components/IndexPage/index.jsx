@@ -6,7 +6,7 @@ import Projects from "./Projects";
 const IndexPage = (props) => {
   return (
     <>
-      <Intro />
+      <Intro introData={props.introData} />
       <br />
       <br />
       <br />

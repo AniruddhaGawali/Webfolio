@@ -13,8 +13,7 @@ const MySkiLL = (props) => {
             return (
               <div className={style.gridItem} key={index}>
                 <img src={skill.link} alt={skill.title} width="80px" />
-                <h2>{skill.title}</h2>
-                {console.log(skill)}
+                <h4>{skill.title}</h4>
                 <span>{<StarRating noOfStars={parseInt(skill.star)} />}</span>
               </div>
             );
@@ -32,7 +31,6 @@ const StarRating = (props) => {
     <>
       <div className={style.starRating}>
         {[...Array(props.noOfStars)].map(() => {
-          console.log(props);
           return <span className={style.star}>&#9733;</span>;
         })}
       </div>
