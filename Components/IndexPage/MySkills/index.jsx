@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./style.module.css";
+import { motion } from "framer-motion";
 
 const MySkiLL = (props) => {
   return (
@@ -11,11 +12,21 @@ const MySkiLL = (props) => {
         <div className={style.gridContainer}>
           {props.skillData.map((skill, index) => {
             return (
-              <div className={style.gridItem} key={index}>
+              <motion.div
+                initial={{ y: "5vw", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  bounce: ".3",
+                  delay: 0.5 + index * 0.1,
+                }}
+                className={style.gridItem}
+                key={index}
+              >
                 <img src={skill.link} alt={skill.title} width="80px" />
                 <h4>{skill.title}</h4>
                 <span>{<StarRating noOfStars={parseInt(skill.star)} />}</span>
-              </div>
+              </motion.div>
             );
           })}
         </div>
