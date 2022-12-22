@@ -30,12 +30,13 @@ const TimeLine = (props) => {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{
-                  background: "var(--color)",
-                  color: "var(--backgroundcolor)",
+                  background: "whitesmoke",
+                  color: "#181a1b",
                   boxShadow: "0 3px 0 var(--pink)",
+                  border: "1px solid #ccc",
                 }}
                 dateClassName={style.date}
-                contentArrowStyle={{ borderRight: "7px solid  var(--color)" }}
+                contentArrowStyle={{ borderRight: "7px solid #ccc" }}
                 date={item.date}
                 iconStyle={{
                   background: "linear-gradient(var(--gradient))",
