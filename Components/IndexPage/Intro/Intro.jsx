@@ -5,6 +5,7 @@ import { MdCancel } from "react-icons/md";
 
 import { BsTwitter } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 const Intro = (props) => {
   const [introDesc, setIntroDesc] = React.useState(true);
@@ -13,8 +14,6 @@ const Intro = (props) => {
 
   return (
     <>
-      {console.log(props.introData)}
-
       <div className={style.wrapper} id="intro">
         <motion.div
           className={style.intro}
@@ -74,6 +73,15 @@ const Intro = (props) => {
                   rel="noreferrer"
                 >
                   <FaLinkedin />
+                </a>
+              </li>
+              <li title="LinkedIn">
+                <a
+                  target="_blank"
+                  href="mailto:aniruddhagawali03@gmail.com"
+                  rel="noreferrer"
+                >
+                  <SiGmail />
                 </a>
               </li>
             </ul>
