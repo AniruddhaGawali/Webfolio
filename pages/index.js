@@ -38,7 +38,7 @@ export default function Home(props) {
     },
     {
       title: "Timeline",
-      tag: "#",
+      tag: "#timeline",
       icon: <MdOutlineTimeline />,
     },
   ];

@@ -20,7 +20,7 @@ const TimeLine = (props) => {
     <>
       {/* {console.log(temp)} */}
       <div className={style.wrapper}>
-        <div className={style.title}>
+        <div className={style.title} id="timeline">
           <h2 id="projects">Timeline</h2>
         </div>
 
