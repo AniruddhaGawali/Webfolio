@@ -12,7 +12,11 @@ const SideNav = (props) => {
       <>
         <div className={style.sideNav}>
           <div
-            style={{ background: "black", height: "20px", borderRadius: "5px" }}
+            style={{
+              background: "var(--backgroundcolor)",
+              height: "20px",
+              borderRadius: "5px",
+            }}
           >
             <BsFillArrowLeftSquareFill className={style.openArrow} />
           </div>
