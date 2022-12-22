@@ -2,6 +2,7 @@ import React from "react";
 import Intro from "./Intro/Intro";
 import MySkiLL from "./MySkills";
 import Projects from "./Projects";
+import TimeLine from "./TimeLine";
 
 const IndexPage = (props) => {
   return (
@@ -29,6 +30,17 @@ const IndexPage = (props) => {
       <br />
       <br />
       <MySkiLL skillData={props.skillData} />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <TimeLine timelineData={props.timelineData} />
     </>
   );
 };

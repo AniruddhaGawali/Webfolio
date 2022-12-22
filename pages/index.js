@@ -4,6 +4,13 @@ import IndexPage from "../Components/IndexPage";
 
 import styles from "../styles/Home.module.css";
 
+import "react-vertical-timeline-component/style.min.css";
+import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 // Importing custom hooks
 
 // Importing icons
@@ -55,6 +62,7 @@ export default function Home(props) {
           projectsData={props.projectsData.data}
           skillData={props.skillData.data}
           introData={props.introData.data[0]}
+          timelineData={props.timelineData.data}
         />
       </main>
     </>
@@ -71,8 +79,13 @@ export async function getStaticProps() {
   const intro = await fetch("https://webfolio-backend.vercel.app/api/intro");
   const introData = await intro.json();
 
+  const timeline = await fetch(
+    "https://webfolio-backend.vercel.app/api/timeline"
+  );
+  const timelineData = await timeline.json();
+
   return {
-    props: { projectsData, skillData, introData }, // will be passed to the page component as props
+    props: { projectsData, skillData, introData, timelineData }, // will be passed to the page component as props
   };
 }
 
