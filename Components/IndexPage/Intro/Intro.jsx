@@ -7,7 +7,7 @@ import { BsTwitter } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Intro = (props) => {
-  const [introDesc, setIntroDesc] = React.useState(false);
+  const [introDesc, setIntroDesc] = React.useState(true);
 
   useEffect(() => {}, []);
 
