@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 80px;
+}
+
+.date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 80px;
+}
