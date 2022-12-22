@@ -11,7 +11,9 @@ const SideNav = (props) => {
     return (
       <>
         <div className={style.sideNav}>
-          <div>
+          <div
+            style={{ background: "black", height: "20px", borderRadius: "5px" }}
+          >
             <BsFillArrowLeftSquareFill className={style.openArrow} />
           </div>
           <div

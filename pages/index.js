@@ -26,7 +26,7 @@ export default function Home(props) {
     },
     {
       title: "Skills",
-      tag: "#",
+      tag: "#myskill",
       icon: <AiOutlineBulb />,
     },
     {
@@ -35,8 +35,6 @@ export default function Home(props) {
       icon: <MdOutlineTimeline />,
     },
   ];
-
-  const [projectsData, setProjectsData] = useState(props.projectsData.data);
 
   useEffect(() => {
     props.setSideNavData(sideNav);
@@ -50,19 +48,24 @@ export default function Home(props) {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main class Name={styles.main}>
-        <IndexPage projectsData={projectsData} />
-        {/* <IndexPage /> */}
+        <IndexPage
+          projectsData={props.projectsData.data}
+          skillData={props.skillData.data}
+        />
       </main>
     </>
   );
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://webfolio-backend.vercel.app/api/projects");
+  var res = await fetch("https://webfolio-backend.vercel.app/api/projects");
   const projectsData = await res.json();
+  const _res = await fetch(
+    "https://webfolio-backend-28q9mr29a-aniruddhagawali.vercel.app/api/skill"
+  );
+  const skillData = await _res.json();
+  // console.log(skillData);
   return {
-    props: { projectsData }, // will be passed to the page component as props
+    props: { projectsData, skillData }, // will be passed to the page component as props
   };
 }
-
-// Not Working
