@@ -1,5 +1,6 @@
 import React from "react";
 import Intro from "./Intro/Intro";
+import MySkiLL from "./MySkills";
 import Projects from "./Projects";
 
 const IndexPage = (props) => {
@@ -27,6 +28,7 @@ const IndexPage = (props) => {
       <br />
       <br />
       <br />
+      <MySkiLL skillData={props.skillData} />
     </>
   );
 };
