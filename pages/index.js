@@ -64,6 +64,7 @@ export default function Home(props) {
 export async function getStaticProps() {
   var res = await fetch("https://webfolio-backend.vercel.app/api/projects");
   const projectsData = await res.json();
+
   const skill = await fetch("https://webfolio-backend.vercel.app/api/skill");
   const skillData = await skill.json();
 
@@ -74,3 +75,5 @@ export async function getStaticProps() {
     props: { projectsData, skillData, introData }, // will be passed to the page component as props
   };
 }
+
+// Not Working
