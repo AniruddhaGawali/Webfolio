@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./style.module.css";
 import { motion } from "framer-motion";
-import wave1 from "./wave1.svg";
 
 const MySkiLL = (props) => {
   return (
