@@ -13,18 +13,7 @@ const ContactMeFooter = () => {
   };
 
   return (
-    <motion.div
-      className={style.contactmefooter}
-      initial={{ y: "10vw" }}
-      whileInView={{ y: 0 }}
-      transition={{
-        duration: 0.3,
-        type: "spring",
-        stiffness: 100,
-        delay: 0.5,
-        bounce: 0.5,
-      }}
-    >
+    <div className={style.contactmefooter}>
       <div className={style.wave}>
         <svg
           data-name="Layer 1"
@@ -95,7 +84,7 @@ const ContactMeFooter = () => {
           Submit
         </motion.button>
       </motion.form>
-    </motion.div>
+    </div>
   );
 };
 
