@@ -37,27 +37,8 @@ const ContactMeFooter = () => {
           ></path>
         </svg>
       </div>
-      <motion.h3
-        initial={{ opacity: 0.3 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          duration: 0.3,
-          stiffness: 100,
-          delay: 0.5,
-        }}
-      >
-        Contact Me
-      </motion.h3>
-      <motion.form
-        onSubmit={handleSubmit}
-        initial={{ opacity: 0.3 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          duration: 0.3,
-          stiffness: 100,
-          delay: 0.5,
-        }}
-      >
+      <h3>Contact Me</h3>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -71,19 +52,8 @@ const ContactMeFooter = () => {
           value={message}
           onChange={(event) => setMessage(event.target.value)}
         />
-        <motion.button
-          initial={{ opacity: 0.3 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.3,
-            stiffness: 100,
-            delay: 0.5,
-          }}
-          type="submit"
-        >
-          Submit
-        </motion.button>
-      </motion.form>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
