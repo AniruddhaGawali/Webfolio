@@ -12,3 +12,9 @@
   color: var(--color);
   margin-bottom: 80px;
 }
+
+@media screen and (max-width: 1170px) {
+  .date {
+    color: var(--backgroundcolor);
+  }
+}
