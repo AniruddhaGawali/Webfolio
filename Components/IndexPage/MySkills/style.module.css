@@ -1,6 +1,7 @@
 .wrapper {
+  position: relative;
   padding: 80px 0;
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 
 .title {
@@ -28,7 +29,7 @@
   text-align: center;
   height: 200px;
   border-radius: 10px;
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #181a1b;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -55,6 +56,29 @@
 
 .star {
   color: #f1c40f;
+}
+
+.wave1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: translateY(100%);
+}
+.wave2 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg) translateY(100%);
+}
+
+.waveFillShape {
+  fill: #f5f5f5;
 }
 
 @media (max-width: 1090px) {

@@ -183,12 +183,12 @@ c-7 -15 -14 -21 -16 -15 -5 16 5 41 17 41 7 0 6 -10 -1 -26z m-1898 -27 c0 -2
             <li className={router.pathname == "/blogs" ? style.active : ""}>
               <Link href="/blogs">Blogs</Link>
             </li>
-            {/* <li>
-              <a href="#">Hobby</a>
-            </li> */}
             <li className={router.pathname == "/contactme" ? style.active : ""}>
-              <Link href="/contactme">Contact Me</Link>
+              <Link href="/contactme">Hobby</Link>
             </li>
+            {/* <li className={router.pathname == "/contactme" ? style.active : ""}>
+              <Link href="/contactme">Contact Me</Link>
+            </li> */}
           </ul>
         </div>
         <div className={`${style.navsocial}  ${style.isMobile}`}>

@@ -18,9 +18,9 @@ const TimeLine = (props) => {
   const { width } = useWindowDimensions();
   return (
     <>
-      {/* {console.log(temp)} */}
       <div className={style.wrapper}>
-        <div className={style.title}>
+        <div className={style.title} id="timeline">
+
           <h2 id="projects">Timeline</h2>
         </div>
 
@@ -50,16 +50,12 @@ const TimeLine = (props) => {
                 <h3 className="vertical-timeline-element-title">
                   {item.title}
                 </h3>
-                {width > 1170 ? null : (
+
+                {/* {width > 1170 ? null : (
                   <h4 className="vertical-timeline-element-subtitle">
                     {item.date}
                   </h4>
-                )}
-
-                {/* <h4 className="vertical-timeline-elemen
-                t-subtitle">
-                  Miami, FL
-                </h4> */}
+                )} */}
                 <p>{item.desc}</p>
               </VerticalTimelineElement>
             );
