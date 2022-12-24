@@ -1,12 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Error404 from "../../Components/error/Error404";
 
 const Blog = () => {
-  return (
-    <div style={{ background: "green", width: "100vw", height: "100vh" }}>
-      Blog
-    </div>
-  );
+  return <Error404 msg="This is under working it will coming soon" />;
 };
 
 export default Blog;

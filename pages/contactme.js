@@ -1,12 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+import Error404 from "../Components/error/Error404";
 
 const contactme = () => {
-  return (
-    <div style={{ background: "blue", width: "100vw", height: "100vh" }}>
-      contactme
-    </div>
-  );
+  return <Error404 msg="This is under working it will coming soon" />;
 };
 
 export default contactme;
