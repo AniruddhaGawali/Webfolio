@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import TimeLine from "./TimeLine";
 import Footer from "../Footer";
 
+
 const IndexPage = (props) => {
   return (
     <>
@@ -42,6 +43,7 @@ const IndexPage = (props) => {
       <br />
       <br />
       <TimeLine timelineData={props.timelineData} />
+
       <br />
       <br />
       <br />
@@ -59,6 +61,7 @@ const IndexPage = (props) => {
       <br />
       <br />
       <Footer />
+
     </>
   );
 };

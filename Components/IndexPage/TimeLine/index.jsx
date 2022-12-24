@@ -20,6 +20,7 @@ const TimeLine = (props) => {
     <>
       <div className={style.wrapper}>
         <div className={style.title} id="timeline">
+
           <h2 id="projects">Timeline</h2>
         </div>
 
@@ -49,6 +50,7 @@ const TimeLine = (props) => {
                 <h3 className="vertical-timeline-element-title">
                   {item.title}
                 </h3>
+
                 {/* {width > 1170 ? null : (
                   <h4 className="vertical-timeline-element-subtitle">
                     {item.date}
