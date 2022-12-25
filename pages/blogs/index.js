@@ -1,9 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Error404 from "../../Components/error/Error404";
+import BlogPage from "../../Components/BlogPage";
 
 const Blog = () => {
-  return <Error404 msg="This is under working it will coming soon" />;
+  return (
+    <>
+      <BlogPage />
+    </>
+  );
 };
 
 export default Blog;
